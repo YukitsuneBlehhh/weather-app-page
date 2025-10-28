@@ -1,0 +1,6 @@
+Color Palette: 
+1: #FAF8F1
+- #d39adc (Complementary Color)
+2: #FAEAB1
+3: #34656D
+4: #334443

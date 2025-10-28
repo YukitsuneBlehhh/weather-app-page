@@ -7,9 +7,14 @@ function fetchWeather(city) {
     fetch(`${urlBase}?q=${city}&appid=${API_KEY}&lang=es`)
     .then(data => data.json())
     .then(data => showWeatherData(data))
-
 }
 
+function errorMessage() {
+    divResponseData.innerHTML = ''
+    const error = document.createElement('p')
+    error.textContent = "No fue posible encontrar la ciudad"
+    divResponseData.appendChild(error)
+}
 
 function showWeatherData(data){
     const divResponseData = document.getElementById('responseData')
@@ -18,7 +23,7 @@ function showWeatherData(data){
     const cityName = data.name
     const countryName = data.sys.country
     const temp = data.main.temp
-    const humidity = data.main.temp
+    const humidity = data.main.humidity
     const description = data.weather[0].description
     const icon = data.weather[0].icon
 
@@ -60,5 +65,3 @@ document.getElementById('searchButton').addEventListener("click", () => {
 }
 
 }) 
-
-

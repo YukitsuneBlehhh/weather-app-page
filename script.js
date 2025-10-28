@@ -61,7 +61,8 @@ document.getElementById('searchButton').addEventListener("click", () => {
     if (city) {
         fetchWeather(city)
     }else {
-        alert('No fue posible no encontrar la ciudad')
+        alert('No fue posible encontrar la ciudad')
 }
 
 }) 
+
